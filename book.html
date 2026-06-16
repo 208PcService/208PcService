@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>208PcService</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">
+    <a href="index.html">
+        <img src="Images/logo.png" alt="208PcService Logo">
+    </a>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="book.html">Book Appointment</a></li>
+</ul>
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+</header>
+
+<div class="page-header">
+<h1>Book Appointment</h1>
+</div>
+
+<section class="section">
+
+<div class="about-container" style="margin-bottom:30px;">
+
+<h4>We are currently open during the weekends. If you have any questions please feel free to contact us, Thank you!!</h4>
+
+<br>
+    
+<p><strong>📍 Location:</strong> Caldwell, ID</p><br>
+
+<p><strong>🕐 Hours:</strong></p>
+<p>Monday – Friday: N/A</p>
+<p>Saturday: 9:00 AM – 5:00 PM</p>
+<p>Sunday: 10:00AM - 3:00PM</p>
+</div>
+
+<div class="form-container">
+
+<form action="https://formspree.io/f/mnjybjva" method="POST">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Phone</label>
+<input type="tel" name="phone" required>
+
+<label>Select Service</label>
+
+<select name="service">
+
+<option>Virus Removal</option>
+<option>PC Diagnostics</option>
+<option>Windows Troubleshooting</option>
+<option>Operating System Installation</option>
+<option>Hardware Installation</option>
+<option>Custom PC Build Assistance</option>
+
+</select>
+
+<label>Preferred Date</label>
+<input type="date" name="date">
+
+<label>Describe The Problem</label>
+<textarea name="issue" rows="5"></textarea>
+
+<button type="submit">Request Appointment</button>
+
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 208PcService. All Rights Reserved.</p>
+<p><a href="privacy.html">Privacy Policy</a></p>
+<p><a href="terms.html">Terms of Service</a></p>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.querySelector('nav ul').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

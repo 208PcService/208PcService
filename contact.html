@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>208PcService</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">
+    <a href="index.html">
+        <img src="Images/logo.png" alt="208PcService Logo">
+    </a>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="book.html">Book Appointment</a></li>
+</ul>
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+</nav>
+</header>
+
+<div class="page-header">
+    <h1>Contact Us</h1>
+
+    <br>
+
+<h4>Have a question or need help with your PC? We're here to help. Reach out to us and we'll get back to you as soon as possible.</h4>
+    
+</div>
+
+<section class="section">
+
+<div class="about-container" style="margin-bottom:30px;">
+
+<p><strong>📞 Phone:</strong> <a href="tel:+1XXXXXXXXXX" style="color:#60a5fa;">N/A</a></p><br>
+<p><strong>📧 Email:</strong> <a href="mailto:208pcservice@gmail.com" style="color:#60a5fa;">208pcservice@gmail.com</a></p><br>
+
+</div>
+
+<div class="form-container">
+
+<form action="https://formspree.io/f/mnjybjva" method="POST">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Phone</label>
+<input type="tel" name="phone">
+
+<label>Message</label>
+<textarea name="message" rows="5"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 208PcService. All Rights Reserved.</p>
+<p><a href="privacy.html">Privacy Policy</a></p>
+<p><a href="terms.html">Terms of Service</a></p>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.querySelector('nav ul').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

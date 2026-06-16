@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0b1220;
+    color:#e5e7eb;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+header{
+    background:#050814;
+    border-bottom:1px solid #1f3b82;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+}
+
+.logo img{
+    height:80px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:#e5e7eb;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb,#0ea5e9);
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+/* PAGE HEADER */
+.page-header{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);
+}
+
+.page-header h1{
+    font-size:2.5rem;
+}
+
+/* SECTIONS */
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+/* GRID */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* SERVICE CARDS */
+.service-card{
+    background:#111c33;
+    border:1px solid #1f2f55;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:#3b82f6;
+}
+
+.service-card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+.service-price{
+    font-size:1.5rem;
+    margin:10px 0;
+    color:#e5e7eb;
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 22px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
+
+/* FORMS */
+.form-container{
+    max-width:700px;
+    margin:auto;
+    background:#111c33;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #1f2f55;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0 20px;
+    background:#0b1220;
+    border:1px solid #243a66;
+    color:white;
+    border-radius:8px;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline:none;
+    border-color:#3b82f6;
+}
+
+/* ABOUT */
+.about-container{
+    max-width:900px;
+    margin:auto;
+    background:#111c33;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #1f2f55;
+}
+
+/* LEGAL */
+.legal{
+    max-width:900px;
+    margin:auto;
+    background:#111c33;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #1f2f55;
+}
+
+.legal h2{
+    color:#60a5fa;
+    margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#050814;
+    border-top:1px solid #1f3b82;
+    margin-top:40px;
+}
+/* SUBMIT BUTTON */
+button[type="submit"]{
+    width:100%;
+    padding:14px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button[type="submit"]:hover{
+    background:#1d4ed8;
+    transform:scale(1.02);
+}
+
+/* CARDS (Why Choose Us / My Work) */
+.card{
+    background:#111c33;
+    border:1px solid #1f2f55;
+    border-radius:15px;
+    padding:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#3b82f6;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+/* HAMBURGER */
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    color:#e5e7eb;
+    font-size:1.8rem;
+    cursor:pointer;
+    padding:5px 10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#050814;
+        padding:20px;
+        gap:15px;
+        border-bottom:1px solid #1f3b82;
+        z-index:999;
+    }
+
+    nav ul.open{
+        display:flex;
+    }
+
+    nav{
+        position:relative;
+        flex-wrap:wrap;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .page-header h1{
+        font-size:1.8rem;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .form-container{
+        padding:20px;
+    }
+
+    .about-container{
+        padding:20px;
+    }
+
+    .logo img{
+        height:55px;
+    }
+}
