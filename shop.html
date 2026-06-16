@@ -105,191 +105,11 @@
     background: #16a34a;
 }
 
-/* ── Sticky cart bar ── */
-.cart-bar {
-    display: none;
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: #050814;
-    border-top: 1px solid #1f3b82;
-    padding: 14px 24px;
-    z-index: 500;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-}
-.cart-bar.visible { display: flex; }
-.cart-bar-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.cart-count {
-    background: #2563eb;
-    color: #fff;
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-.cart-total-label {
-    color: #e5e7eb;
-    font-size: 1rem;
-    font-weight: 600;
-}
-.cart-bar-right { display: flex; gap: 10px; }
-.view-cart-btn {
-    padding: 10px 20px;
-    background: #111c33;
-    color: #60a5fa;
-    border: 1px solid #1f3b82;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-family: 'Segoe UI', sans-serif;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.view-cart-btn:hover { border-color: #3b82f6; color: #93c5fd; }
-.checkout-bar-btn {
-    padding: 10px 20px;
-    background: #2563eb;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-family: 'Segoe UI', sans-serif;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.checkout-bar-btn:hover { background: #1d4ed8; }
-
-/* ── Cart modal ── */
-.modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.65);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-}
-.modal-overlay.open { display: flex; }
-.modal {
-    background: #0d1626;
-    border: 1px solid #1f3b82;
-    border-radius: 15px;
-    width: min(520px, 95vw);
-    max-height: 85vh;
-    display: flex;
-    flex-direction: column;
-}
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 24px;
-    border-bottom: 1px solid #1f3b82;
-}
-.modal-header h2 { font-size: 1.2rem; color: #e5e7eb; }
-.close-modal {
-    background: none;
-    border: none;
-    color: #9ca3af;
-    font-size: 1.5rem;
-    cursor: pointer;
-    line-height: 1;
-    padding: 0 4px;
-}
-.close-modal:hover { color: #e5e7eb; }
-.modal-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px 24px;
-}
-.cart-empty-msg {
-    text-align: center;
-    padding: 50px 0;
-    color: #6b7280;
-}
-.cart-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 0;
-    border-bottom: 1px solid #1f2f55;
-}
-.cart-item-icon { font-size: 2rem; width: 44px; text-align: center; }
-.cart-item-info { flex: 1; }
-.cart-item-info h4 { font-size: 0.95rem; color: #e5e7eb; margin-bottom: 3px; }
-.cart-item-info p  { font-size: 0.8rem; color: #9ca3af; }
-.cart-item-price   { font-weight: 700; color: #e5e7eb; white-space: nowrap; }
-.remove-item {
-    background: none;
-    border: none;
-    color: #ef4444;
-    cursor: pointer;
-    font-size: 1.1rem;
-    padding: 4px 6px;
-}
-.remove-item:hover { color: #fca5a5; }
-.modal-footer {
-    padding: 18px 24px;
-    border-top: 1px solid #1f3b82;
-}
-.modal-total {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #e5e7eb;
-    margin-bottom: 16px;
-}
-.modal-checkout-btn {
-    width: 100%;
-    padding: 14px;
-    background: #2563eb;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Segoe UI', sans-serif;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.modal-checkout-btn:hover { background: #1d4ed8; }
-
-/* ── Toast ── */
-.toast {
-    position: fixed;
-    bottom: 80px; left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: #16a34a;
-    color: #fff;
-    padding: 11px 22px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    z-index: 3000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s, transform 0.25s;
-    white-space: nowrap;
-}
-.toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* extra bottom padding so cart bar doesn't cover last row */
-.section { padding-bottom: 100px; }
-
 @media(max-width: 768px) {
     .product-grid { grid-template-columns: 1fr 1fr; }
 }
 @media(max-width: 480px) {
     .product-grid { grid-template-columns: 1fr; }
-    .cart-bar { flex-direction: column; align-items: flex-start; }
-    .cart-bar-right { width: 100%; }
-    .checkout-bar-btn, .view-cart-btn { flex: 1; text-align: center; }
 }
 </style>
 </head>
@@ -338,40 +158,10 @@
 
 </section>
 
-<!-- STICKY CART BAR -->
-<div class="cart-bar" id="cartBar">
-    <div class="cart-bar-left">
-        <span class="cart-count" id="cartCount">0 items</span>
-        <span class="cart-total-label" id="cartTotalLabel">$0.00</span>
-    </div>
-    <div class="cart-bar-right">
-        <button class="view-cart-btn" onclick="openModal()">View Cart</button>
-        <button class="checkout-bar-btn" onclick="checkout()">Contact Us to Order</button>
-    </div>
-</div>
 
-<!-- CART MODAL -->
-<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
-    <div class="modal">
-        <div class="modal-header">
-            <h2>Your Cart</h2>
-            <button class="close-modal" onclick="closeModal()">&#10005;</button>
-        </div>
-        <div class="modal-body" id="modalBody">
-            <p class="cart-empty-msg">Your cart is empty.</p>
-        </div>
-        <div class="modal-footer">
-            <div class="modal-total">
-                <span>Total</span>
-                <span id="modalTotal">$0.00</span>
-            </div>
-            <button class="modal-checkout-btn" onclick="checkout()">Contact Us to Order</button>
-        </div>
-    </div>
-</div>
 
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
+
+
 
 <!-- FOOTER -->
 <footer>
@@ -398,8 +188,6 @@ const products = [
     { id:14, name:"USB-C to USB-A Adapter",   category:"accessories", price:9.99,   icon:"&#128268;", tag:"Accessories", desc:"Simple adapter for connecting USB-C devices to older USB-A ports." },
 ];
 
-let cart = [];
-
 function renderProducts(filter) {
     const list = filter === "all" ? products : products.filter(p => p.category === filter);
     document.getElementById("productGrid").innerHTML = list.map(p => `
@@ -409,7 +197,6 @@ function renderProducts(filter) {
             <h3>${p.name}</h3>
             <p>${p.desc}</p>
             <div class="product-price">$${p.price.toFixed(2)}</div>
-            <button class="add-btn" id="btn-${p.id}" onclick="addToCart(${p.id})">Add to Cart</button>
         </div>
     `).join("");
 }
@@ -418,73 +205,6 @@ function filterProducts(cat, btn) {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     renderProducts(cat);
-}
-
-function addToCart(id) {
-    const product = products.find(p => p.id === id);
-    const existing = cart.find(i => i.id === id);
-    if (existing) { existing.qty++; } else { cart.push({ ...product, qty: 1 }); }
-    updateCartUI();
-    showToast(product.name + " added to cart");
-    const btn = document.getElementById("btn-" + id);
-    if (btn) {
-        btn.textContent = "Added!";
-        btn.classList.add("added");
-        setTimeout(() => { btn.textContent = "Add to Cart"; btn.classList.remove("added"); }, 1500);
-    }
-}
-
-function removeFromCart(id) {
-    cart = cart.filter(i => i.id !== id);
-    updateCartUI();
-}
-
-function updateCartUI() {
-    const totalQty   = cart.reduce((s, i) => s + i.qty, 0);
-    const totalPrice = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    const priceStr   = "$" + totalPrice.toFixed(2);
-
-    const bar = document.getElementById("cartBar");
-    totalQty > 0 ? bar.classList.add("visible") : bar.classList.remove("visible");
-
-    document.getElementById("cartCount").textContent      = totalQty + (totalQty === 1 ? " item" : " items");
-    document.getElementById("cartTotalLabel").textContent = priceStr;
-    document.getElementById("modalTotal").textContent     = priceStr;
-
-    const body = document.getElementById("modalBody");
-    if (cart.length === 0) {
-        body.innerHTML = '<p class="cart-empty-msg">Your cart is empty.</p>';
-        return;
-    }
-    body.innerHTML = cart.map(i => `
-        <div class="cart-item">
-            <div class="cart-item-icon">${i.icon}</div>
-            <div class="cart-item-info">
-                <h4>${i.name}</h4>
-                <p>Qty: ${i.qty}</p>
-            </div>
-            <span class="cart-item-price">$${(i.price * i.qty).toFixed(2)}</span>
-            <button class="remove-item" onclick="removeFromCart(${i.id})" title="Remove">&#10005;</button>
-        </div>
-    `).join("");
-}
-
-function openModal()  { document.getElementById("modalOverlay").classList.add("open"); }
-function closeModal() { document.getElementById("modalOverlay").classList.remove("open"); }
-function handleOverlayClick(e) { if (e.target === document.getElementById("modalOverlay")) closeModal(); }
-
-function checkout() {
-    if (cart.length === 0) { showToast("Your cart is empty!"); return; }
-    const lines = cart.map(i => i.name + " x" + i.qty + " ($" + (i.price * i.qty).toFixed(2) + ")").join("%0A");
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0).toFixed(2);
-    window.location.href = "mailto:208pcservice@gmail.com?subject=Shop%20Order&body=Hi%2C%20I%27d%20like%20to%20order%3A%0A%0A" + lines + "%0A%0ATotal%3A%20%24" + total;
-}
-
-function showToast(msg) {
-    const t = document.getElementById("toast");
-    t.textContent = msg;
-    t.classList.add("show");
-    setTimeout(() => t.classList.remove("show"), 2000);
 }
 
 function toggleMenu() {
