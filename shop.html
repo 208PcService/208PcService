@@ -172,146 +172,21 @@
 
 <script>
 const products = [
-    {
-        id:1,
-        name:"500GB SSD (SATA)",
-        category:"storage",
-        price:49.99,
-        icon:"💾",
-        tag:"Storage",
-        desc:"Reliable SATA SSD — a great upgrade from a spinning hard drive.",
-        amazon:"https://www.amazon.com/s?k=500GB+SATA+SSD"
-    },
-    {
-        id:2,
-        name:"1TB SSD (SATA)",
-        category:"storage",
-        price:79.99,
-        icon:"💾",
-        tag:"Storage",
-        desc:"1TB of fast SATA storage, perfect for your OS and games combined.",
-        amazon:"https://www.amazon.com/s?k=1TB+SATA+SSD"
-    },
-    {
-        id:3,
-        name:"500GB NVMe M.2 SSD",
-        category:"storage",
-        price:64.99,
-        icon:"⚡",
-        tag:"Storage",
-        desc:"Blazing-fast NVMe speeds for a much snappier everyday experience.",
-        amazon:"https://www.amazon.com/s?k=500GB+NVMe+M.2+SSD"
-    },
-    {
-        id:4,
-        name:"1TB NVMe M.2 SSD",
-        category:"storage",
-        price:99.99,
-        icon:"⚡",
-        tag:"Storage",
-        desc:"High-capacity NVMe for heavy workloads, video editing, and gaming.",
-        amazon:"https://www.amazon.com/s?k=1TB+NVMe+M.2+SSD"
-    },
-    {
-        id:5,
-        name:"8GB DDR4 RAM",
-        category:"memory",
-        price:24.99,
-        icon:"🧠",
-        tag:"Memory",
-        desc:"Single 8GB DDR4 stick — compatible with most desktops and laptops.",
-        amazon:"https://www.amazon.com/s?k=8GB+DDR4+RAM"
-    },
-    {
-        id:6,
-        name:"16GB DDR4 RAM Kit (2x8)",
-        category:"memory",
-        price:44.99,
-        icon:"🧠",
-        tag:"Memory",
-        desc:"Dual-channel kit for noticeably snappier multitasking performance.",
-        amazon:"https://www.amazon.com/s?k=16GB+DDR4+RAM+Kit"
-    },
-    {
-        id:7,
-        name:"32GB DDR4 RAM Kit (2x16)",
-        category:"memory",
-        price:79.99,
-        icon:"🧠",
-        tag:"Memory",
-        desc:"Ideal for streaming, editing, or running very demanding workloads.",
-        amazon:"https://www.amazon.com/s?k=32GB+DDR4+RAM+Kit"
-    },
-    {
-        id:8,
-        name:"120mm Case Fan",
-        category:"cooling",
-        price:12.99,
-        icon:"🌀",
-        tag:"Cooling",
-        desc:"Quiet 120mm fan to improve airflow and keep your temps in check.",
-        amazon:"https://www.amazon.com/s?k=120mm+Case+Fan"
-    },
-    {
-        id:9,
-        name:"CPU Thermal Paste",
-        category:"cooling",
-        price:8.99,
-        icon:"🧪",
-        tag:"Cooling",
-        desc:"High-quality thermal compound for better CPU heat transfer.",
-        amazon:"https://www.amazon.com/s?k=CPU+Thermal+Paste"
-    },
-    {
-        id:10,
-        name:"Aftermarket CPU Cooler",
-        category:"cooling",
-        price:29.99,
-        icon:"❄️",
-        tag:"Cooling",
-        desc:"Outperforms most stock coolers — quieter and runs much cooler.",
-        amazon:"https://www.amazon.com/s?k=Aftermarket+CPU+Cooler"
-    },
-    {
-        id:11,
-        name:"SATA Data Cables (x2)",
-        category:"accessories",
-        price:7.99,
-        icon:"🔌",
-        tag:"Accessories",
-        desc:"Two SATA III data cables for connecting drives inside your case.",
-        amazon:"https://www.amazon.com/s?k=SATA+Data+Cables"
-    },
-    {
-        id:12,
-        name:"Anti-Static Wrist Strap",
-        category:"accessories",
-        price:6.99,
-        icon:"🛡️",
-        tag:"Accessories",
-        desc:"Protect your components from static discharge during any install.",
-        amazon:"https://www.amazon.com/s?k=Anti+Static+Wrist+Strap"
-    },
-    {
-        id:13,
-        name:"PC Cleaning Kit",
-        category:"accessories",
-        price:14.99,
-        icon:"🧹",
-        tag:"Accessories",
-        desc:"Compressed air, brush, and microfibre cloth for a thorough clean.",
-        amazon:"https://www.amazon.com/s?k=PC+Cleaning+Kit"
-    },
-    {
-        id:14,
-        name:"USB-C to USB-A Adapter",
-        category:"accessories",
-        price:9.99,
-        icon:"🔌",
-        tag:"Accessories",
-        desc:"Simple adapter for connecting USB-C devices to older USB-A ports.",
-        amazon:"https://www.amazon.com/s?k=USB-C+to+USB-A+Adapter"
-    }
+
+    { id:1,  name:"500GB SSD (SATA)",        category:"storage",     price:49.99,  icon:"&#128190;", tag:"Storage",     desc:"Reliable SATA SSD — a great upgrade from a spinning hard drive." , url:"#"},
+    { id:2,  name:"1TB SSD (SATA)",           category:"storage",     price:79.99,  icon:"&#128190;", tag:"Storage",     desc:"1TB of fast SATA storage, perfect for your OS and games combined." , url:"#"},
+    { id:3,  name:"500GB NVMe M.2 SSD",       category:"storage",     price:64.99,  icon:"&#9889;",   tag:"Storage",     desc:"Blazing-fast NVMe speeds for a much snappier everyday experience." , url:"#"},
+    { id:4,  name:"1TB NVMe M.2 SSD",         category:"storage",     price:99.99,  icon:"&#9889;",   tag:"Storage",     desc:"High-capacity NVMe for heavy workloads, video editing, and gaming." , url:"#"},
+    { id:5,  name:"8GB DDR4 RAM",             category:"memory",      price:24.99,  icon:"&#129513;", tag:"Memory",      desc:"Single 8GB DDR4 stick — compatible with most desktops and laptops." , url:"#"},
+    { id:6,  name:"16GB DDR4 RAM Kit (2x8)",  category:"memory",      price:44.99,  icon:"&#129513;", tag:"Memory",      desc:"Dual-channel kit for noticeably snappier multitasking performance." , url:"#"},
+    { id:7,  name:"32GB DDR4 RAM Kit (2x16)", category:"memory",      price:79.99,  icon:"&#129513;", tag:"Memory",      desc:"Ideal for streaming, editing, or running very demanding workloads." , url:"#"},
+    { id:8,  name:"120mm Case Fan",           category:"cooling",     price:12.99,  icon:"&#127744;", tag:"Cooling",     desc:"Quiet 120mm fan to improve airflow and keep your temps in check." , url:"#"},
+    { id:9,  name:"CPU Thermal Paste",        category:"cooling",     price:8.99,   icon:"&#129514;", tag:"Cooling",     desc:"High-quality thermal compound for better CPU heat transfer." , url:"#"},
+    { id:10, name:"Aftermarket CPU Cooler",   category:"cooling",     price:29.99,  icon:"&#10052;",  tag:"Cooling",     desc:"Outperforms most stock coolers — quieter and runs much cooler." , url:"#"},
+    { id:11, name:"SATA Data Cables (x2)",    category:"accessories", price:7.99,   icon:"&#128268;", tag:"Accessories", desc:"Two SATA III data cables for connecting drives inside your case." , url:"#"},
+    { id:12, name:"Anti-Static Wrist Strap",  category:"accessories", price:6.99,   icon:"&#128737;", tag:"Accessories", desc:"Protect your components from static discharge during any install." , url:"#"},
+    { id:13, name:"PC Cleaning Kit",          category:"accessories", price:14.99,  icon:"&#129529;", tag:"Accessories", desc:"Compressed air, brush, and microfibre cloth for a thorough clean." , url:"#"},
+    { id:14, name:"USB-C to USB-A Adapter",   category:"accessories", price:9.99,   icon:"&#128268;", tag:"Accessories", desc:"Simple adapter for connecting USB-C devices to older USB-A ports." , url:"#"},
 ];
 
 function renderProducts(filter) {
@@ -323,6 +198,7 @@ function renderProducts(filter) {
             <h3>${p.name}</h3>
             <p>${p.desc}</p>
             <div class="product-price">$${p.price.toFixed(2)}</div>
+            <a href="${p.url}" target="_blank" class="add-btn">View Product</a>
         </div>
     `).join("");
 }
